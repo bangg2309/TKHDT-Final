@@ -2,15 +2,21 @@ package quanLyDonHang;
 
 import java.util.List;
 
+import quanLyBan.Table;
+import quanLyBan.TableFactory;
+import quanLyThongTinSanPham.Product;
+
 public class Order {
 	private int orderId;
 	private String customerName;
-	private List<String> items;
+	private TableFactory table;
+	private List<Product> items;
 
-	public Order(int orderId, String customerName, List<String> items) {
+	public Order(int orderId, String customerName,TableFactory table, List<Product> items) {
 		super();
 		this.orderId = orderId;
 		this.customerName = customerName;
+		this.setTable(table);
 		this.items = items;
 	}
 
@@ -30,12 +36,28 @@ public class Order {
 		this.customerName = customerName;
 	}
 
-	public List<String> getItems() {
+	public List<Product> getItems() {
 		return items;
 	}
 
-	public void setItems(List<String> items) {
+	public void setItems(List<Product> items) {
 		this.items = items;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", customerName=" + customerName + ", table=" + table + ", items=" + items
+				+ "]";
+	}
+
+	public TableFactory getTable() {
+		return table;
+	}
+
+	public void setTable(TableFactory table) {
+		this.table = table;
+	}
+	
 
 }

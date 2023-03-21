@@ -13,9 +13,11 @@ public class CafeManagementApp {
 		productData.addProduct("Cà phê sữa");
 		productData.addProduct("Trà đào cam sả");
 		productData.addProduct("Trà sen vắt");
-
+		
 		// Xóa sản phẩm khỏi
 		productData.removeProduct("Cà phê đen");
+		productData.removeProduct("Cà phê đen");
+		
 		
 	}
 }

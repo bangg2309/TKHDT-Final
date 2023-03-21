@@ -15,4 +15,6 @@ public class SmallTable implements Table {
     public void displayInfo() {
         System.out.println( "Small --> " + "Table Number: " + tableNumber + ", Number of Seats: " + numberOfSeats);
     }
+
+
 }

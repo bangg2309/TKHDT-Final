@@ -13,4 +13,5 @@ public class LargeTable implements Table {
 	public void displayInfo() {
 		System.out.println( "Large --> " + "Table Number: " + tableNumber + ", Number of Seats: " + numberOfSeats);
 	}
+	
 }

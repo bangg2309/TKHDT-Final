@@ -3,7 +3,7 @@ package tinhTien;
 import quanLyThongTinSanPham.Product;
 import quanLyThongTinSanPham.ProductManager;
 
-public class CalculateByProduct implements PaymentStrategy {
+public class CalculateByQR implements PaymentStrategy {
 	
 	public double calculate(double amount) {
 		// tính tiền bằng cách chọn sản phẩm
