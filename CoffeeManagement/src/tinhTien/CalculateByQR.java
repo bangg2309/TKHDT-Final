@@ -19,5 +19,4 @@ public class CalculateByQR implements PaymentStrategy {
 		return result;
 
 	}
-
 }

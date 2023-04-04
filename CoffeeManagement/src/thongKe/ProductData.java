@@ -3,20 +3,22 @@ package thongKe;
 import java.util.ArrayList;
 import java.util.List;
 
+import quanLyThongTinSanPham.Product;
+
 // Interface để khai báo các phương thức cập nhật khi có sự thay đổi trong dữ liệu
 
-public class ProductData {
-	private List<String> productList = new ArrayList<>();
+public class ProductData implements Subject {
+	private List<Product> productList = new ArrayList<>();
 	private List<Observer> observerList = new ArrayList<>();
 
 	// Phương thức để thêm sản phẩm vào danh sách
-	public void addProduct(String product) {
+	public void addProduct(Product product) {
 		productList.add(product);
 		notifyObservers();
 	}
 
 	// Phương thức để xóa sản phẩm khỏi danh sách
-	public void removeProduct(String product) {
+	public void removeProduct(Product product) {
 		productList.remove(product);
 		notifyObservers();
 	}
@@ -32,14 +34,15 @@ public class ProductData {
 	}
 
 	// Phương thức để thông báo cập nhật đến các đối tượng thống kê
-	private void notifyObservers() {
+	public void notifyObservers() {
 		for (Observer observer : observerList) {
 			observer.update();
 		}
 	}
 
 	// Phương thức để lấy danh sách sản phẩm
-	public List<String> getProductList() {
+	public List<Product> getProductList() {
 		return productList;
 	}
+
 }

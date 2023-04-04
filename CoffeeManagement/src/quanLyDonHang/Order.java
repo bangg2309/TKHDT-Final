@@ -2,7 +2,6 @@ package quanLyDonHang;
 
 import java.util.List;
 
-import quanLyBan.Table;
 import quanLyBan.TableFactory;
 import quanLyThongTinSanPham.Product;
 

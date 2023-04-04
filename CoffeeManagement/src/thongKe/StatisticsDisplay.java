@@ -2,6 +2,8 @@ package thongKe;
 
 import java.util.List;
 
+import quanLyThongTinSanPham.Product;
+
 public class StatisticsDisplay implements Observer {
 	private ProductData productData;
 
@@ -12,7 +14,7 @@ public class StatisticsDisplay implements Observer {
 
 	@Override
 	public void update() {
-		List<String> productList = productData.getProductList();
+		List<Product> productList = productData.getProductList();
 		int totalProducts = productList.size();
 		System.out.println("Total number of products: " + totalProducts);
 	}
